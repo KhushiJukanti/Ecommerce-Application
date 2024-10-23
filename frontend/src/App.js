@@ -7,9 +7,9 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import EcommerceNavbar from './components/Navbar';
 import ProductComponent from './components/ProductManagement';
-import Cart from './components/Cart';
 import Payments from './components/Checkout';
 import Orders from './components/Orders';
+import AllCarts from './components/Cart';
 
 const App = () => {
     return (
@@ -20,7 +20,7 @@ const App = () => {
                     <Route path="/" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/admin" element={<ProductComponent />} />
-                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/cart" element={<AllCarts/>} />
                     <Route path="/orders" element={<Orders/>} />
                     <Route path="/checkout" element={<Payments />} />
                     <Route path="/dashboard" element={<Dashboard />} />
