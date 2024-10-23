@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:7000'; // Replace with your backend URL
+const API_URL = 'https://ecommerce-application-ualq.onrender.com'; // Replace with your backend URL
 
 // Fetch all products
 export const fetchProducts = () => axios.get(`${API_URL}/products/`);
@@ -65,7 +65,7 @@ export const removeCartItem = async (cartId, itemId) => {
 
 export const clearCart = async (userId) => {
   try {
-      const response = await axios.delete(`http://localhost:7000/api/carts/${userId}/clear`);
+      const response = await axios.delete(`${API_URL}/carts/${userId}/clear`);
       return response.data;
   } catch (error) {
       throw new Error('Error clearing cart');
